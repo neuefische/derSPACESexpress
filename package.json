@@ -1,0 +1,27 @@
+{
+  "name": "derspacesexpress",
+  "version": "1.0.0",
+  "description": "the fastest newsapp for SPACES",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch src/styles.scss dist/styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lenkly/derSPACESexpress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lenkly/derSPACESexpress/issues"
+  },
+  "homepage": "https://github.com/Lenkly/derSPACESexpress#readme",
+  "devDependencies": {
+    "csslint": "^1.0.5",
+    "htmlhint": "^0.11.0",
+    "prettier": "^1.19.1",
+    "sass": "^1.25.0"
+  },
+  "dependencies": {}
+}
