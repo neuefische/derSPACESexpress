@@ -1,0 +1,37 @@
+@use '../base.scss';
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: base.$primary-color;
+  height: 75px;
+}
+
+.bottom-nav__icon {
+  color: base.$secondary-color;
+  transition: 0.3s;
+}
+
+.bottom-nav__btn {
+  background-color: base.$primary-color;
+  border: none;
+  height: 75px;
+  width: 75px;
+  outline: none;
+  font-size: 45px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.bottom-nav__icon:hover {
+  color: base.$font-white;
+}
+.bottom-nav__btn-active {
+  background-color: base.$highlight-color;
+}
+.bottom-nav__icon-active {
+  color: base.$font-white;
+}
