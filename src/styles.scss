@@ -1,3 +1,11 @@
+/* Load all relevant style sheets*/
+
 @use 'base.scss';
 @use 'utils.scss';
+@use 'components/header.scss';
 @use 'components/footer.scss';
+@use 'components/card.scss';
+@use 'components/profile.scss';
+@use 'components/ticker.scss';
+@use 'components/videos.scss';
+@use 'components/article.scss';

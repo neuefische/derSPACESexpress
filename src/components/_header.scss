@@ -1,0 +1,13 @@
+@use '../base.scss';
+
+.site-header {
+  background-color: base.$primary-color;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  height: 75px;
+  color: base.$secondary-color;
+}
