@@ -1,0 +1,69 @@
+@use '../base.scss';
+
+.card--ticker {
+  margin: 0.4rem 0;
+  border-bottom: 1px solid base.$secondary-color;
+  transition: 0.3s;
+}
+
+.card--ticker:hover {
+  border-bottom: 1px solid base.$highlight-color;
+}
+
+.card--ticker__link {
+  display: block;
+  padding-bottom: 0.8rem;
+  text-decoration: none;
+  color: base.$primary-color;
+  cursor: pointer;
+}
+
+.card--ticker__time {
+  color: base.$highlight-color;
+  font-weight: 800;
+  font-size: 1.15rem;
+  padding-top: 0.8rem;
+}
+
+.card--ticker__image {
+  width: 100%;
+}
+
+.card--ticker__image-wrapper {
+  margin: 0.8rem 0.8rem 0.8rem 0;
+}
+
+.card--ticker__teaser {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card--ticker__teaser-text {
+  align-self: baseline;
+}
+
+.card--ticker__footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.card--ticker__source {
+  font-style: italic;
+  color: base.$secondary-color;
+  align-self: center;
+}
+
+.card--ticker__tag {
+  background-color: base.$alt-bg-color;
+  color: base.$primary-color;
+  border: none;
+  padding: 0.8rem;
+  transition: 0.3s;
+}
+
+.card--ticker__tag:hover {
+  outline: 1px solid base.$primary-color;
+}
