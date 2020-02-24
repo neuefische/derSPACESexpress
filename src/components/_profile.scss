@@ -3,6 +3,9 @@
 .profile--dark {
   background-color: base.$secondary-color;
   color: base.$font-white;
+  margin: 0 -15px;
+  padding-left: 15px;
+  padding-right: 15px;
   line-height: 1.7em;
   padding-bottom: 0.8rem;
   padding-top: 0.8rem;
@@ -10,9 +13,11 @@
 
 .profile__personal {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
+  line-height: 1.7em;
   padding-top: 0.8em;
   padding-bottom: 0.8rem;
 }
@@ -63,7 +68,9 @@
   transition: 0.3s;
   margin: 3px 3px;
 }
-
+.profile__message {
+  padding-bottom: 0.8em;
+}
 .profile__switch {
   display: grid;
   grid-template-columns: 300px 1fr;
