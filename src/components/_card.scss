@@ -1,5 +1,199 @@
 @use '../base.scss';
 
+.card {
+  border-bottom: 1px solid #999;
+  margin: 1.6rem 0;
+}
+
 .card__img {
   width: 100%;
+  max-width: 400px;
+}
+
+.card__subtitle {
+  color: base.$highlight-color;
+  font-weight: 800;
+  font-size: 1.15rem;
+  padding-top: 0.8rem;
+}
+
+.card__title:after {
+  content: "";
+  display: block;
+  width: 55px;
+  padding-top: 15px;
+  margin: 0 auto 30px 0;
+  border-bottom: 7px solid base.$primary-color;
+}
+
+.card__source {
+  font-style: italic;
+  color: base.$secondary-color;
+  margin: 0.8rem 0;
+}
+
+.card__link {
+  transition: color 0.3s ease-in-out;
+  border: none;
+  color: base.$highlight-color;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 2px;
+  max-width: 100%;
+  white-space: normal;
+  margin: 0.8rem 0rem;
+  display: block;
+}
+
+/* First card */
+
+.card--first {
+  margin: -15px -15px 1.6rem -15px;
+}
+
+.card--first__img {
+  width: 100%;
+}
+
+.card--first__img-fluid {
+  width: 100%;
+}
+
+.card--first__subtitle {
+  color: base.$highlight-color;
+  font-weight: 800;
+  font-size: 1.15rem;
+  padding-top: 0.8rem;
+  margin: 0px 15px;
+}
+
+.card--first__title {
+  margin: 1.6rem 15px;
+}
+
+.card--first__title:after {
+  content: "";
+  display: block;
+  width: 55px;
+  padding-top: 15px;
+  margin: 0 auto 30px 0;
+  border-bottom: 7px solid base.$primary-color;
+}
+
+.card--first__teaser {
+  margin: 0px 15px;
+}
+
+.card--first__source {
+  font-style: italic;
+  color: base.$secondary-color;
+  margin: 0.8rem 0;
+}
+
+.card--first__link {
+  transition: color 0.3s ease-in-out;
+  border: none;
+  color: base.$highlight-color;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 2px;
+  max-width: 100%;
+  white-space: normal;
+  margin: 0.8rem 15px;
+  display: block;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #999;
+}
+
+/* best of print */
+
+.best-of-print {
+  padding: 15px;
+  background-color: base.$alt-2-bg-color;
+  margin: 0px -15px;
+}
+
+.best-of-print__header {
+  padding: 15px;
+}
+
+.best-of-print__header:after {
+  content: "";
+  display: block;
+  width: 55px;
+  padding-top: 15px;
+  margin: 0 auto 30px 0;
+  border-bottom: 7px solid base.$primary-color;
+}
+
+.best-of-print__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.best-of-print__content:after {
+  content: "";
+  display: block;
+  width: 55px;
+  padding-top: 15px;
+  margin: 0 auto 30px auto;
+  border-bottom: 7px solid base.$primary-color;
+}
+
+.best-of-print__teaser {
+  padding: 0px 15px;
+  display: block;
+  text-align: center;
+  width: 75%;
+}
+
+.best-of-print__title {
+  text-align: center;
+  padding: 0px 15px;
+}
+
+.best-of-print__img {
+  width: 40%;
+}
+
+.best-of-print__footer {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  background-color: base.$alt-2-bg-color;
+  margin: 0px -15px;
+}
+
+.best-of-print__button {
+  font-weight: 400;
+  border: none;
+  display: inline-block;
+  min-height: 50px;
+  background-color: #e4b23a;
+  color: #fff;
+  font-size: 1em;
+  line-height: 30px;
+  margin: 0;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  will-change: background-color;
+}
+
+.link-to-top {
+  display: flex;
+  justify-content: center;
+}
+
+.link-to-top__link {
+  display: block;
+  color: base.$highlight-color;
+  font-weight: 800;
+  font-size: 1.15rem;
+  padding: 1.6rem 0rem;
 }
