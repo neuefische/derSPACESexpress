@@ -14,17 +14,26 @@
 .bottom-nav__icon {
   color: base.$secondary-color;
   transition: 0.3s;
+  width: 100%;
+  height: 100%;
+}
+
+.bottom-nav > a {
+  width: 100%;
+  text-decoration: none;
 }
 
 .bottom-nav__btn {
   background-color: base.$primary-color;
   border: none;
   height: 75px;
-  width: 75px;
+  width: 100%;
   outline: none;
   font-size: 45px;
   cursor: pointer;
   transition: 0.3s;
+  display: flex;
+  justify-content: center;
 }
 .bottom-nav__icon:hover {
   color: base.$font-white;
