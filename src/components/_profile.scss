@@ -1,0 +1,126 @@
+@use '../base.scss';
+
+.profile--dark {
+  background-color: base.$secondary-color;
+  color: base.$font-white;
+  margin: 0 -15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 1.7em;
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
+}
+
+.profile__personal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  line-height: 1.7em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8rem;
+}
+
+.profile__link {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-underline-position: under;
+}
+
+.profile__delete {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-underline-position: under;
+  color: red;
+  padding-bottom: 0.8rem;
+}
+
+.profile__link:hover {
+  color: base.$highlight-color;
+}
+
+.profile__category {
+  padding-top: 0.8em;
+  padding-bottom: 0.8rem;
+}
+.profile__category--header {
+  padding-bottom: 0.8em;
+}
+.profile__category--selection {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile__category--tag {
+  background-color: base.$secondary-color;
+  color: base.$font-white;
+  border: none;
+  padding: 0.8em;
+  transition: 0.3s;
+  margin: 3px 3px;
+}
+.profile__category--tag-active {
+  background-color: base.$highlight-color;
+  color: base.$font-white;
+  border: none;
+  padding: 0.8em;
+  transition: 0.3s;
+  margin: 3px 3px;
+}
+.profile__message {
+  padding-bottom: 0.8em;
+}
+.profile__switch {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.switch {
+  position: relative;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  justify-self: end;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: base.$secondary-color;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: base.$highlight-color;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px base.$highlight-color;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
