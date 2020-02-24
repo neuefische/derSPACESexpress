@@ -11,8 +11,92 @@
     ></script>
   </head>
   <body>
-    <header class="site-header"><h1>der SPACES express</h1></header>
-    <main></main>
+    <header class="site-header">
+      <h1>
+        <a href="#">
+          <img
+            src="assets/spaces-logo.svg"
+            alt="der SPACES express"
+            style="width: 300px;"
+          />
+        </a>
+      </h1>
+    </header>
+    <main>
+      <section>
+        <h2>Profileinstellungen</h2>
+        <div class="profile__personal">
+          <img
+            src="assets/profile-placeholder.png"
+            width="150px"
+            height="150px"
+            alt="Profile picture"
+          />
+          <h3>Benutzername</h3>
+        </div>
+        <button class="card_button">Bild ändern</button>
+        <br /><br />
+        <div>
+          <h3>Benachrichtigungen</h3>
+          <div class="profile__switch">
+            <p>Benachrichtigungen im Sperrbildschirm</p>
+            <label class="switch" for="message">
+              <input type="checkbox" id="message" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <br />
+          <div class="profile__switch">
+            <p>Benachrichtigung in Kategorien</p>
+            <label class="switch" for="category-check">
+              <input type="checkbox" id="category-check" checked />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+        <div class="profile__category">
+          <div class="profile__category--header">
+            <h3>Meine Kategorien</h3>
+          </div>
+          <div class="profile__category--selection">
+            <button class="profile__category--tag">
+              Gesellschaft
+            </button>
+            <button class="profile__category--tag">
+              Politik
+            </button>
+            <button class="profile__category--tag-active">
+              Sport
+            </button>
+            <button class="profile__category--tag-active">
+              Gesundheit
+            </button>
+            <button class="profile__category--tag">
+              Wissen
+            </button>
+            <button class="profile__category--tag">
+              Wirtschaft
+            </button>
+            <button class="profile__category--tag-active">
+              Musik
+            </button>
+            <button class="profile__category--tag">
+              Film & Fernsehen
+            </button>
+            <button class="profile__category--tag">
+              Literatur
+            </button>
+          </div>
+        </div>
+
+        <div class="profile--dark">
+          <h3>Account-Einstellungen</h3>
+          <div class="profile__link">E-Mail-Adresse ändern<br /></div>
+          <div class="profile__link">Passwort ändern<br /></div>
+          <div class="profile__delete">Profil löschen<br /></div>
+        </div>
+      </section>
+    </main>
     <footer class="bottom-nav">
       <a href="index.html"
         ><button class="bottom-nav__btn">
