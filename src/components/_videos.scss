@@ -1,0 +1,21 @@
+@use '../base.scss';
+
+.card--videos__iframe {
+  width: 100%;
+
+  margin-top: 0.8rem;
+}
+
+.card--videos {
+  margin: 0.4rem 0;
+  border-bottom: 1px solid base.$secondary-color;
+  transition: 0.3s;
+}
+
+.card--videos__link {
+  display: block;
+  padding-bottom: 0.8rem;
+  text-decoration: none;
+  color: base.$primary-color;
+  cursor: pointer;
+}
