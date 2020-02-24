@@ -1,0 +1,11 @@
+@use '../base.scss';
+
+.card--article {
+  margin: 0.4rem 0;
+  border-bottom: 1px solid base.$secondary-color;
+  transition: 0.3s;
+}
+
+.card--article__image {
+  width: 100%;
+}
