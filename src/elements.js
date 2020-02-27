@@ -1,4 +1,4 @@
-// import { teasers } from "module";
+// Create data for import
 
 const teasers = [
   {
@@ -26,6 +26,7 @@ function createTeaser(teasers) {
   /* define object from DOM where we want to append teasers */
   const main = document.querySelector("main");
 
+  /* run trough each teaser from teasers object */
   teasers.forEach(teaser => {
     /* define elements of teaser */
     let teaserArticle = document.createElement("article");
@@ -66,7 +67,7 @@ function createTeaser(teasers) {
     /* insert image into image wrapper */
     teaserImgWrapper.appendChild(teaserImg);
 
-    /* insert image link into image*/
+    /* insert image link into image */
     teaserImg.src = teaser.imglink;
 
     /* append article to main element */
