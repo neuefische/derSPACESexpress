@@ -1,5 +1,5 @@
 // Create data for import
-import { teasers } from "./data/teaser.js";
+import { teasers } from "./data/elements.js";
 
 function createTeaser(teasers) {
   /* define object from DOM where we want to append teasers */
