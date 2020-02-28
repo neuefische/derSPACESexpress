@@ -4,6 +4,7 @@
   "description": "the fastest newsapp for SPACES",
   "main": "index.js",
   "scripts": {
+    "build": "sass src/styles.scss dist/styles.css",
     "dev": "sass --watch src/styles.scss dist/styles.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/Lenkly/derSPACESexpress#readme",
   "devDependencies": {
     "csslint": "^1.0.5",
+    "eslint": "^6.8.0",
     "htmlhint": "^0.11.0",
     "prettier": "^1.19.1",
     "sass": "^1.25.0"
