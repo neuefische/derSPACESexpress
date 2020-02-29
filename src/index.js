@@ -1,3 +1,12 @@
+// Load article structure
+const articleStructure = import("./data/articlestructure.js");
+
+// Create variable to contain all needed data
+let articleContent = [];
+
+// Import data
+importData(querySectionIds());
+
 // Return ids of sections from page as array
 
 function querySectionIds() {
@@ -12,67 +21,34 @@ function querySectionIds() {
   return sectionIds;
 }
 
-// Load needed Data
+// Load data needed for the page
 
 function importData(sectionIds) {
   sectionIds.forEach(function(id) {
     let dataSourcePath = "./data/" + id + ".js";
-    import(dataSourcePath);
+    articleContent[id] = import(dataSourcePath);
   });
 }
 
-importData(querySectionIds());
+// Create content after data is loaded
 
-// Create data for import
+Promise.all([articleStructure, articleContent]).then(result => {
+  console.log(result);
+  console.log(result[0].structure.teaser.article);
+});
 
-function createTeaser(teasers) {
-  /* define object from DOM where we want to append teasers */
-  const main = document.querySelector("main");
+/* pageData.then(
+  function(result) {
+    console.log("WORKS"); // "Stuff worked!"
+    console.log(result.bestofprint[0].title);
+  },
+  function(err) {
+    console.log("WRRONG"); // Error: "It broke"
+  }
+); */
 
-  /* run trough each teaser from teasers object */
-  teasers.forEach(teaser => {
-    /* define elements of teaser */
-    let teaserArticle = document.createElement("article");
-    let teaserImgWrapper = document.createElement("div");
-    let teaserImg = document.createElement("img");
-    let teaserSubtitle = document.createElement("div");
-    let teaserTitle = document.createElement("h2");
-    let teaserText = document.createElement("p");
-    let teaserLink = document.createElement("a");
+// Create structure
 
-    /* insert content */
-    let subtitleContent = document.createTextNode(teaser.subtitle);
-    teaserSubtitle.appendChild(subtitleContent);
-
-    let titleContent = document.createTextNode(teaser.title);
-    teaserTitle.appendChild(titleContent);
-
-    let teaserTextContent = document.createTextNode(teaser.teaserText);
-    teaserText.appendChild(teaserTextContent);
-
-    let teaserLinkContent = document.createTextNode("Mehr lesen...");
-    teaserLink.appendChild(teaserLinkContent);
-
-    teaserLink.href = teaser.teaserLink;
-
-    /* build article structure */
-    teaserArticle.appendChild(teaserImgWrapper);
-    teaserArticle.appendChild(teaserSubtitle);
-    teaserArticle.appendChild(teaserTitle);
-    teaserArticle.appendChild(teaserText);
-    teaserArticle.appendChild(teaserLink);
-
-    /* insert image into image wrapper */
-    teaserImgWrapper.appendChild(teaserImg);
-
-    /* insert image link into image */
-    teaserImg.src = teaser.imgLink;
-
-    /* append article to main element */
-    main.appendChild(teaserArticle);
-  });
-}
-
-/* run function using teasers data */
-
-//createTeaser(teasers);
+/* teasers.forEach(function(element) {
+  console.log(element);
+}); */
