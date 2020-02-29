@@ -1,3 +1,17 @@
+// Read sections and ids from page and save in array
+
+function querySectionIds() {
+  let sections = document.querySelectorAll("section");
+  let sectionIds = [];
+  sections.forEach(function(element) {
+    if (element.id != "") {
+      sectionIds.push(element.id);
+    }
+  });
+
+  return sectionIds;
+}
+
 // Create data for import
 import { teasers } from "./data/elements.js";
 
