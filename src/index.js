@@ -1,4 +1,4 @@
-// Read sections and ids from page and save in array
+// Return ids of sections from page as array
 
 function querySectionIds() {
   let sections = document.querySelectorAll("section");
@@ -12,8 +12,18 @@ function querySectionIds() {
   return sectionIds;
 }
 
+// Load needed Data
+
+function importData(sectionIds) {
+  sectionIds.forEach(function(id) {
+    let dataSourcePath = "./data/" + id + ".js";
+    import(dataSourcePath);
+  });
+}
+
+importData(querySectionIds());
+
 // Create data for import
-import { teasers } from "./data/elements.js";
 
 function createTeaser(teasers) {
   /* define object from DOM where we want to append teasers */
@@ -65,4 +75,4 @@ function createTeaser(teasers) {
 
 /* run function using teasers data */
 
-createTeaser(teasers);
+//createTeaser(teasers);
