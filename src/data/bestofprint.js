@@ -34,7 +34,7 @@ export const bestofprint = [
   }
 ];
 
-export const articlePicture = {
+/*export const articlePicture = {
   imgLink:
     "https://cdn.prod.www.spiegel.de/images/f07fe829-de28-40ab-8db1-91f2e3373ebf_w948_r1.77_fpx28.63_fpy44.98.jpg"
-};
+};*/

@@ -24,31 +24,26 @@ function querySectionIds() {
 // Load data needed for the page
 
 function importData(sectionIds) {
-  sectionIds.forEach(function(id) {
+  sectionIds.forEach(function(id, index) {
     let dataSourcePath = "./data/" + id + ".js";
-    articleContent[id] = import(dataSourcePath);
+    articleContent[index] = import(dataSourcePath);
   });
 }
 
 // Create content after data is loaded
 
-Promise.all([articleStructure, articleContent]).then(result => {
-  console.log(result);
-  console.log(result[0].structure.teaser.article);
+let structure;
+let content = [];
+
+Promise.all([articleStructure, [articleContent]]).then(result => {
+  structure = result[0].structure;
+
+  Promise.all(result[1][0]).then(result => {
+    result.forEach(function(contentData) {
+      content.push(contentData);
+    });
+  });
+
+  console.log(structure);
+  console.log(content);
 });
-
-/* pageData.then(
-  function(result) {
-    console.log("WORKS"); // "Stuff worked!"
-    console.log(result.bestofprint[0].title);
-  },
-  function(err) {
-    console.log("WRRONG"); // Error: "It broke"
-  }
-); */
-
-// Create structure
-
-/* teasers.forEach(function(element) {
-  console.log(element);
-}); */
