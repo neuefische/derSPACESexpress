@@ -25,5 +25,7 @@
     "prettier": "^1.19.1",
     "sass": "^1.25.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "now": "^17.0.4"
+  }
 }
