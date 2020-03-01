@@ -1,5 +1,6 @@
 // Load article structure
-const articleStructure = import("./data/articlestructure.js");
+import { structure } from "./data/articlestructure.js";
+//const articleStructure = import("./data/articlestructure.js");
 
 // Create variable to contain all needed data
 let articleContent = [];
@@ -32,17 +33,11 @@ function importData(sectionIds) {
 
 // Create content after data is loaded
 
-let structure;
 let content = [];
+let contentIds = querySectionIds();
 
-Promise.all([articleStructure, [articleContent]]).then(result => {
-  structure = result[0].structure;
-
-  Promise.all(result[1][0]).then(result => {
-    result.forEach(function(contentData) {
-      content.push(contentData);
-    });
-  });
+Promise.all([articleContent]).then(results => {
+  content = results;
 
   console.log(structure);
   console.log(content);
