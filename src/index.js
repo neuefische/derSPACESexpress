@@ -15,6 +15,7 @@ function createTeaser(teasers) {
     let teaserTitle = document.createElement("h2");
     let teaserText = document.createElement("p");
     let teaserLink = document.createElement("a");
+    teaserImg.classList.add("img-fluid");
 
     /* insert content */
     let subtitleContent = document.createTextNode(teaser.subtitle);
@@ -52,3 +53,19 @@ function createTeaser(teasers) {
 /* run function using teasers data */
 
 createTeaser(teasers);
+
+/* Load more button functionality */
+
+let bestOfPrintContentWrapper = document.querySelector(
+  ".best-of-print__wrapper"
+);
+
+// let divHeight = bestOfPrintContentWrapper.offsetHeight;
+bestOfPrintContentWrapper.style.height = "0px";
+bestOfPrintContentWrapper.style.transition = "1s";
+let bestOfPrintContentHeight = bestOfPrintContentWrapper.scrollHeight;
+
+let loadMoreButton = document.querySelector(".best-of-print__button");
+loadMoreButton.addEventListener("click", function() {
+  bestOfPrintContentWrapper.style.height = bestOfPrintContentHeight + "px";
+});
