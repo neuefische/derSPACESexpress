@@ -16,6 +16,14 @@ function createTeaser(teasers) {
     let teaserText = document.createElement("p");
     let teaserLink = document.createElement("a");
 
+    /* Add classes */
+    teaserArticle.classList.add("card");
+    teaserImgWrapper.classList.add("card__img");
+    teaserImg.classList.add("img-fluid");
+    teaserSubtitle.classList.add("card__subtitle");
+    teaserTitle.classList.add("card__title");
+    teaserLink.classList.add("card__link");
+
     /* insert content */
     let subtitleContent = document.createTextNode(teaser.subtitle);
     teaserSubtitle.appendChild(subtitleContent);
