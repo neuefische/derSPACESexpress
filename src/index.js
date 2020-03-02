@@ -60,12 +60,19 @@ let bestOfPrintContentWrapper = document.querySelector(
   ".best-of-print__wrapper"
 );
 
-// let divHeight = bestOfPrintContentWrapper.offsetHeight;
+let bestOfPrintContent = document.querySelectorAll(".best-of-print__content");
+
 bestOfPrintContentWrapper.style.height = "0px";
 bestOfPrintContentWrapper.style.transition = "1s";
-let bestOfPrintContentHeight = bestOfPrintContentWrapper.scrollHeight;
+bestOfPrintContent.forEach(article => {
+  article.style.display = "none";
+});
 
 let loadMoreButton = document.querySelector(".best-of-print__button");
 loadMoreButton.addEventListener("click", function() {
+  bestOfPrintContent.forEach(article => {
+    article.style.display = "flex";
+  });
+  let bestOfPrintContentHeight = bestOfPrintContentWrapper.scrollHeight;
   bestOfPrintContentWrapper.style.height = bestOfPrintContentHeight + "px";
 });
